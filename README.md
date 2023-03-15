@@ -26,8 +26,7 @@ making the unit tests redundant. For the sake of the example, both the unit and 
 There is also an integration test in `tests/repl.rs`. As is often the case, writing the
 integration test required thinking carefully about how to structure the main program. Here, I've made the `repl` function
 generic over its input and output – they can be any types implementing `BufRead` and `Write` respectively. This allows the
-main program to pass in locks on stdin and stdout, while the integration test can pass in a reader on a static string and a `Cursor`
-wrapping a `Vec` of bytes, so the test can be run without live user input.
+main program to pass in locks on stdin and stdout, while the integration test can use in-memory buffers, allowing it to run without live user input.
 
 For a real program, you probably wouldn't want to explicitly test the user-directed output of the program; you should prefer to design your program
 such that you can run an integration test on the general logic of the program while still allowing the exact text shown to the user to vary. For the 
