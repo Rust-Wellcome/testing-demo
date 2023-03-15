@@ -16,7 +16,7 @@ Run the program with `cargo run`. Run the tests with `cargo test`.
 The `factorial` function has a number of unit tests defined in the `tests` module in `src/factorial.rs`. This module has the `#[cfg(test)]`
 attribute, which means it will only be included in compilation when compiling to run tests; it won't bloat the actual built binary.
 
-## Doc tests
+## Doctests
 
 The `factorial` function also has doctests in its doc comment. In a real program, these would probably be sufficient,
 making the unit tests redundant. For the sake of the example, both the unit and doc tests are left in.
