@@ -3,7 +3,7 @@
 /// # Examples
 /// Basic usage:
 /// ```
-/// # use testing_demo::factorial;
+/// use testing_demo::factorial;
 /// assert_eq!(factorial(0), Some(1));
 /// assert_eq!(factorial(1), Some(1));
 /// assert_eq!(factorial(3), Some(6));
